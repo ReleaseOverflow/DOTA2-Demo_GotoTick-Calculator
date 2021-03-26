@@ -1,5 +1,7 @@
 # DOTA2-Demo_GotoTick-Calculator
 Uses the "copy to clipboard" feature to capture and calculate the exact demo_gototick value for the currently copied time-scheme
+GUI will fleshed out later on, maybe. But its working perfectly for what it was made for right now.
+
 
 USE:
 

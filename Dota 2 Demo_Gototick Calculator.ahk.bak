@@ -1,0 +1,31 @@
+﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+
+Haystack := "dota2://matchid=5555628944&matchtime=2453"
+Needle := "dota2://matchid="
+If InStr(Haystack, Needle)
+    ; MsgBox, The string was found.
+    NewStr := StrReplace(Haystack, Needle, "")
+    ; MsgBox, %NewStr%
+; Loop, parse, NewStr
+; {
+; If ( A_LoopField = "=")
+; Break
+; result .= A_LoopField
+; }
+
+; msgbox %result%
+; msgbox % SubStr(NewStr, 1, InStr(NewStr, "=") - 1) 
+ResultStr := SubStr(NewStr, InStr(NewStr, "=") + 1)
+msgbox %ResultStr%
+
+; Else
+;     MsgBox, The string was not found.
+
+
+; string := "asdfasdfasdfasdf - something is written here"
+
+
